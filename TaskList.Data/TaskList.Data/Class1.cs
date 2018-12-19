@@ -5,8 +5,4 @@ namespace TaskList.Data
     public class TaskRepository: ITaskRepository
     {
     }
-    interface ITaskRepository
-    {
-
-    }
 }
