@@ -6,7 +6,6 @@ namespace TaskList.Interface
 {
     interface IViewModel
     {
-
     }
-   
+    
 }
