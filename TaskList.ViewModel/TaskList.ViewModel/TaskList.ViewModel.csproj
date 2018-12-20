@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\TaskList.Interface\TaskList.Interface\TaskList.Interface.csproj" />
     <ProjectReference Include="..\..\TaskList.Model\TaskList.Model.csproj" />
+    <ProjectReference Include="..\..\TaskList.Service\TaskList.Service\TaskList.Service.csproj" />
   </ItemGroup>
 
 </Project>
