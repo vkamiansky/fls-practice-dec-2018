@@ -7,4 +7,8 @@ namespace TaskList.Interface
     public interface IViewModel
     {
     }
+    public interface ITaskRepository
+    {
+    }
+        
 }
