@@ -8,6 +8,6 @@ namespace TaskList.ViewModel
 {
     class MainViewModel : IMainViewModel
     {
-        NavigationService NavigationService { set; get; }
+        INavigationService NavigationService { set; get; }
     }
 }
