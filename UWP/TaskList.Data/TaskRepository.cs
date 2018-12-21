@@ -1,5 +1,5 @@
 ﻿using System;
-using TaskList.Interface
+using TaskList.Interface;
 namespace TaskList.Data
 {
     public class TaskRepository: ITaskRepository
