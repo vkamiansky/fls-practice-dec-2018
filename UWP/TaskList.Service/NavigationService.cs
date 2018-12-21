@@ -3,7 +3,5 @@ using TaskList.Interface;
 
 namespace TaskList.Service
 {
-    public class NavigationService : INavigationService
-    {
-    }
+    public class NavigationService : INavigationService { }
 }
