@@ -4,8 +4,7 @@ using System.Text;
 
 namespace TaskList.Interface
 {
-   public interface ITaskRepository
+    public interface ITaskRepository
     {
-
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TaskList.Interface
 {
-    interface IRepository
+    public interface IRepository
     {
     }
 }

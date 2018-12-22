@@ -5,7 +5,7 @@ using TaskList.Interface;
 
 namespace TaskList.ViewModel
 {
-    class MainViewModel : IMainViewModel
+    public class MainViewModel : IMainViewModel
     {
         INavigationService NavigationService { set; get; }
     }
