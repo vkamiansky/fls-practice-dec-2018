@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TaskList.DataModel\TaskList.DataModel.csproj" />
     <ProjectReference Include="..\TaskList.Interface\TaskList.Interface.csproj" />
+    <ProjectReference Include="..\TaskList.Model\TaskList.Model.csproj" />
   </ItemGroup>
 
 </Project>
