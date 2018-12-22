@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using TaskList.Interface;
+using TaskList.Model;
 
 namespace TaskList.ViewModel
 {
