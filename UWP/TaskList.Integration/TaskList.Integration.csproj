@@ -4,4 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaskList.Data\TaskList.Data.csproj" />
+    <ProjectReference Include="..\TaskList.Interface\TaskList.Interface.csproj" />
+    <ProjectReference Include="..\TaskList.Service\TaskList.Service.csproj" />
+    <ProjectReference Include="..\TaskList.ViewModel\TaskList.ViewModel.csproj" />
+    <ProjectReference Include="..\TaskList.View\TaskList.View\TaskList.View.csproj" />
+  </ItemGroup>
+
 </Project>
