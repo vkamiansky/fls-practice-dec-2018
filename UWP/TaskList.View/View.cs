@@ -2,7 +2,7 @@
 
 namespace TaskList.View
 {
-    public class Class1
+    public class View
     {
     }
 }
