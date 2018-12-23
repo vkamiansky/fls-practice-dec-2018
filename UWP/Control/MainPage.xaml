@@ -6,36 +6,37 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Height="1000" Width="1000">
-    <Canvas Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid x:Name="grid"  Height="500" Width="500" BorderBrush="Black" BorderThickness="1" Margin="0,0,0,0" Canvas.Left="267" Canvas.Top="210">
-            <Rectangle x:Name="rec1" Margin="0,0,0,0">
-                <Rectangle.Fill>
-                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                        <GradientStop Color="Blue" Offset="0"/>
-                        <GradientStop Color="#FF6517EE" Offset="0.5"/>
-                        <GradientStop Color="Orange" Offset="1"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <Rectangle Margin="0,0,0,0">
-                <Rectangle.Fill >
-                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
-                        <GradientStop Color="Transparent" Offset="0"/>
-                        <GradientStop Color="White" Offset="1"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <Line Stroke="White" X1="250" Y1="0" X2="250" Y2="500" StrokeThickness="0.5"/>
-            <Line Stroke="White" X1="0" Y1="250" X2="500" Y2="250" StrokeThickness="0.5"/>
+    Height="600" Width="600">
+    <Canvas Height="500" Width="500">
+        <Grid x:Name="grid" BorderThickness="1" Height="500" Width="500"  PointerMoved="grid_PointerMoved">
+            <Canvas Background="Transparent">
+                <Rectangle Stroke="Black" StrokeThickness="2"  Height="500" Width="500">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                            <GradientStop Color="Blue" Offset="0"/>
+                            <GradientStop Color="#FF6517EE" Offset="0.5"/>
+                            <GradientStop Color="Orange" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle Stroke="Black" StrokeThickness="2" Height="500" Width="500">
+                    <Rectangle.Fill >
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                            <GradientStop Color="Transparent" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Line Stroke="White" X1="250" Y1="0" X2="250" Y2="500" StrokeThickness="0.5"/>
+                <Line Stroke="White" X1="0" Y1="250" X2="500" Y2="250" StrokeThickness="0.5"/>
+                <Ellipse x:Name="round" Height="20" Width="20" Stroke="Black" StrokeThickness="2" Canvas.Left="{Binding X}" Canvas.Top="{Binding Y}"/>
+            </Canvas>
         </Grid>
-        <TextBlock Text="Важность" FontSize="40" Height="56" Width="490" TextAlignment="Center" Canvas.Left="269" Canvas.Top="713" />
-        <TextBlock Margin="0,0,0,0"  Text="Срочность" FontSize="40" TextWrapping="Wrap" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="56" Width="490" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="-13.189" Canvas.Top="432.77">
+        <TextBlock Text="Важность" FontSize="40" Height="56" Width="490" TextAlignment="Center" Canvas.Top="500"/>
+        <TextBlock Text="Срочность" FontSize="40" TextWrapping="Wrap" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="56" Width="490" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="-270" Canvas.Top="220">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="-90"/>
             </TextBlock.RenderTransform>
         </TextBlock>
     </Canvas>
-
-
 </Page>

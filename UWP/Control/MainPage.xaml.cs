@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Input;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +27,22 @@ namespace Control
         public MainPage()
         {
             this.InitializeComponent();
+            
+
+        }
+
+        private Point mousePosition;
+
+        private void grid_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            mousePosition = e.GetCurrentPoint(grid).Position;
+            if(mousePosition.X<500 && mousePosition.Y < 500 && mousePosition.X > 0 && mousePosition.Y > 0)
+            {
+                mousePosition.X -= 10;
+                mousePosition.Y -= 10;
+                round.DataContext = mousePosition;
+            }
+
         }
     }
 }

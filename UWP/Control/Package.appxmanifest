@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="0d787d13-56ac-4cb5-98c0-9bb93b5c354b"
-    Publisher="CN=Грэгори"
+    Name="029ba47c-3620-45bb-a9fc-05bf82b6c00d"
+    Publisher="CN=kanter"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0d787d13-56ac-4cb5-98c0-9bb93b5c354b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="029ba47c-3620-45bb-a9fc-05bf82b6c00d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Control</DisplayName>
-    <PublisherDisplayName>Грэгори</PublisherDisplayName>
+    <PublisherDisplayName>kanter</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
