@@ -26,7 +26,7 @@ namespace Control
     {
         public MainPage()
         {
-            this.InitializeComponent();  
+            this.InitializeComponent();
 
         }
 
@@ -35,8 +35,8 @@ namespace Control
         private void grid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
             mousePosition = GetCoordinates(sender, e);
-                round.DataContext = mousePosition;
-           
+            round.DataContext = mousePosition;
+
 
         }
 

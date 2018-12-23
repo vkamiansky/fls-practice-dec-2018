@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskList.View", "TaskList.V
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskList.Integration", "TaskList.Integration\TaskList.Integration.csproj", "{E659AA04-4D74-4791-AA27-64268B0E7531}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control", "Control\Control.csproj", "{5B55C510-F9A4-4073-874D-CFD6805287CA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,28 +221,6 @@ Global
 		{E659AA04-4D74-4791-AA27-64268B0E7531}.Release|x64.Build.0 = Release|Any CPU
 		{E659AA04-4D74-4791-AA27-64268B0E7531}.Release|x86.ActiveCfg = Release|Any CPU
 		{E659AA04-4D74-4791-AA27-64268B0E7531}.Release|x86.Build.0 = Release|Any CPU
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|ARM.ActiveCfg = Debug|ARM
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|ARM.Build.0 = Debug|ARM
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|ARM.Deploy.0 = Debug|ARM
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|ARM64.ActiveCfg = Debug|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|x64.ActiveCfg = Debug|x64
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|x64.Build.0 = Debug|x64
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|x64.Deploy.0 = Debug|x64
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|x86.ActiveCfg = Debug|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|x86.Build.0 = Debug|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Debug|x86.Deploy.0 = Debug|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|Any CPU.ActiveCfg = Release|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|ARM.ActiveCfg = Release|ARM
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|ARM.Build.0 = Release|ARM
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|ARM.Deploy.0 = Release|ARM
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|ARM64.ActiveCfg = Release|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|x64.ActiveCfg = Release|x64
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|x64.Build.0 = Release|x64
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|x64.Deploy.0 = Release|x64
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|x86.ActiveCfg = Release|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|x86.Build.0 = Release|x86
-		{5B55C510-F9A4-4073-874D-CFD6805287CA}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
