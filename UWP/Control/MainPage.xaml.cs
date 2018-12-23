@@ -40,7 +40,7 @@ namespace Control
 
         }
 
-        private void grid_PonterPressed(object sender, PointerRoutedEventArgs e)
+        private void grid_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             GetCoordinates(sender, e);
         }
