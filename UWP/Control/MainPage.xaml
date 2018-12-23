@@ -29,7 +29,7 @@
                 </Rectangle>
                 <Line Stroke="White" X1="250" Y1="0" X2="250" Y2="500" StrokeThickness="0.5"/>
                 <Line Stroke="White" X1="0" Y1="250" X2="500" Y2="250" StrokeThickness="0.5"/>
-                <Ellipse x:Name="round" Height="20" Width="20" Stroke="Black" StrokeThickness="2" Canvas.Left="{Binding X}" Canvas.Top="{Binding Y}"/>
+                <Ellipse x:Name="round" Height="20" Width="20" Stroke="LightGray" StrokeThickness="4" Canvas.Left="{Binding X}" Canvas.Top="{Binding Y}"/>
             </Canvas>
         </Grid>
         <TextBlock Text="Важность" FontSize="40" Height="56" Width="490" TextAlignment="Center" Canvas.Top="500"/>
