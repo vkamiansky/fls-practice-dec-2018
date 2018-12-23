@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Height="600" Width="600">
     <Canvas Height="500" Width="500">
-        <Grid x:Name="grid" BorderThickness="1" Height="500" Width="500"  PointerMoved="grid_PointerMoved" PointerPressed="grid_PointerPressed>
+        <Grid x:Name="grid" BorderThickness="1" Height="500" Width="500"  PointerMoved="grid_PointerMoved" PointerPressed="grid_PointerPressed">
             <Canvas Background="Transparent">
                 <Rectangle Stroke="Black" StrokeThickness="2"  Height="500" Width="500">
                     <Rectangle.Fill>
