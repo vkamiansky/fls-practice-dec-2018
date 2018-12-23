@@ -4,5 +4,6 @@ namespace TaskList.View
 {
     public class View
     {
+
     }
 }
