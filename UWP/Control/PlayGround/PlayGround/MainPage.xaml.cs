@@ -27,17 +27,16 @@ namespace Control
         public MainPage()
         {
             this.InitializeComponent();
-
         }
 
         private Point mousePosition;
 
+       
         private void grid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
+            round.Visibility = Visibility.Visible;
             mousePosition = GetCoordinates(sender, e);
             round.DataContext = mousePosition;
-
-
         }
 
         private void grid_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -47,7 +46,25 @@ namespace Control
 
         private Point GetCoordinates(object sender, PointerRoutedEventArgs e)
         {
-            return e.GetCurrentPoint(grid).Position;
+            var gr = (Grid)sender;
+            Point position = e.GetCurrentPoint(gr).Position;
+           
+            if (position.X > gr.Width - round.Width)
+            {
+                position.X -= round.Width;
+
+                if (position.Y > gr.Height - round.Height)
+                {
+                    position.Y -= round.Height;
+                }
+
+            }
+            else if (position.Y > gr.Height - round.Height)
+            {
+                position.Y -= round.Height;
+            }
+            return position;
         }
+            
     }
 }
