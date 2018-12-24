@@ -31,7 +31,7 @@ namespace Control
 
         private Point mousePosition;
 
-       
+
         private void grid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
             round.Visibility = Visibility.Visible;
@@ -48,7 +48,7 @@ namespace Control
         {
             var gr = (Grid)sender;
             Point position = e.GetCurrentPoint(gr).Position;
-           
+
             if (position.X > gr.Width - round.Width)
             {
                 position.X -= round.Width;
@@ -65,6 +65,6 @@ namespace Control
             }
             return position;
         }
-            
+
     }
 }

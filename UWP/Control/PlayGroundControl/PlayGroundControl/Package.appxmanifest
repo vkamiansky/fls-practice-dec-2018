@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="fab75cda-1867-4453-8b02-79142351f500"
+    Name="61362cbe-8efb-4c70-84f6-713ca4dbb946"
     Publisher="CN=user"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="fab75cda-1867-4453-8b02-79142351f500" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="61362cbe-8efb-4c70-84f6-713ca4dbb946" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>PlayGround</DisplayName>
+    <DisplayName>PlayGroundControl</DisplayName>
     <PublisherDisplayName>user</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="PlayGround.App">
+      EntryPoint="PlayGroundControl.App">
       <uap:VisualElements
-        DisplayName="PlayGround"
+        DisplayName="PlayGroundControl"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="PlayGround"
+        Description="PlayGroundControl"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
