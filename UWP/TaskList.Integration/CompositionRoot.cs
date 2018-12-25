@@ -26,20 +26,18 @@ namespace TaskList.Integration
         {
             var containerBuilder = new ContainerBuilder();
 
+            containerBuilder.RegisterType<MainPage>().Keyed<Page>("MainPage");
+
             // Место для добавления сервисов
             containerBuilder.
                 RegisterType<NavigationService>().
-                As<INavigationService>();
+                As<INavigationService>().WithParameter("frame", frame);
 
-            // Добавление страниц
-            containerBuilder.
-                RegisterType<MainPage>().
-                Keyed<Page>(PageKeys.MainPage);
-            
+
             // Добавление MainViewModel
             containerBuilder.
                  RegisterType<MainViewModel>().
-                 As<IMainViewModel>();
+                 As<IMainViewModel>().PropertiesAutowired();
 
             return containerBuilder.Build();
         }
