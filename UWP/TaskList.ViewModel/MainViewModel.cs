@@ -5,8 +5,13 @@ using TaskList.Interface;
 
 namespace TaskList.ViewModel
 {
-    class MainViewModel : IMainViewModel
+    public class MainViewModel : IMainViewModel
     {
-        INavigationService NavigationService { set; get; }
+        public INavigationService NavigationService { set; get; }
+
+        public void StartNavigation()
+        {
+            NavigationService.Navigate(PageKeys.MainPage, this);
+        }
     }
 }
