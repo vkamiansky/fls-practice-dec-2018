@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // Документацию по шаблону элемента "Пользовательский элемент управления" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App6
+namespace Control
 {
     public sealed partial class GradientPlanePicker : UserControl
     {
@@ -23,12 +23,6 @@ namespace App6
         {
             this.InitializeComponent();
         }
-
-
-
-
-        
-
         private Point mousePosition;
 
 
@@ -49,23 +43,22 @@ namespace App6
             var gr = (Grid)sender;
             Point position = e.GetCurrentPoint(gr).Position;
 
-           if (position.X > gr.Width - round.Width)
+            if (position.X > gr.Width - round.Width)
             {
-               position.X -= round.Width;
+                position.X -= round.Width;
 
-              if (position.Y > gr.Height - round.Height)
+                if (position.Y > gr.Height - round.Height)
                 {
-                   position.Y -= round.Height;
+                    position.Y -= round.Height;
                 }
 
             }
-           else if (position.Y > gr.Height - round.Height)
+            else if (position.Y > gr.Height - round.Height)
             {
-               position.Y -= round.Height;
+                position.Y -= round.Height;
             }
             return position;
         }
 
     }
 }
-

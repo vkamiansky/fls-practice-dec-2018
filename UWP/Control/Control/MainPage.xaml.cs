@@ -26,11 +26,5 @@ namespace Control
         {
             this.InitializeComponent();
         }
-
-        
-        
-      
-
     }
 }
-
