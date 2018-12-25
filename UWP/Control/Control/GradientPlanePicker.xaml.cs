@@ -24,19 +24,83 @@ namespace Control
             this.InitializeComponent();
         }
         private Point mousePosition;
+        private bool check=false;
+
+        public static readonly DependencyProperty XProperty;
+        public static readonly DependencyProperty YProperty;
+        public static readonly DependencyProperty X_TitleProperty;
+        public static readonly DependencyProperty Y_TitleProperty;
+        static GradientPlanePicker()
+        {
+            XProperty = DependencyProperty.Register("X", typeof(double),typeof(GradientPlanePicker),new PropertyMetadata(null) );
+            YProperty = DependencyProperty.Register("Y", typeof(double), typeof(GradientPlanePicker), new PropertyMetadata(null));
+            Y_TitleProperty = DependencyProperty.Register("Y_Title", typeof(string), typeof(GradientPlanePicker), new PropertyMetadata(null));
+            X_TitleProperty = DependencyProperty.Register("X_Title", typeof(string), typeof(GradientPlanePicker), new PropertyMetadata(null));
+        }
+
+        
+        public double X {
+            get
+            {
+                return (double)GetValue(XProperty);
+            }
+            set
+            {
+                SetValue(XProperty, value);
+            }
+        }
+        public double Y
+        {
+            get
+            {
+                return (double)GetValue(YProperty);
+            }
+            set
+            {
+                SetValue(YProperty, value);
+            }
+        }
+        public string X_Title
+        {
+            get
+            {
+                return (string)GetValue(X_TitleProperty);
+            }
+            set
+            {
+                SetValue(X_TitleProperty, value);
+            }
+        }
+        public string Y_Title
+        {
+            get
+            {
+                return (string)GetValue(Y_TitleProperty);
+            }
+            set
+            {
+                SetValue(Y_TitleProperty, value);
+            }
+        }
 
 
         private void grid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
-            round.Visibility = Visibility.Visible;
-            mousePosition = GetCoordinates(sender, e);
-            round.DataContext = mousePosition;
+            if(!check)
+            {
+                mousePosition = GetCoordinates(sender, e);
+                round.DataContext = mousePosition;
+            }
         }
 
         private void grid_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            GetCoordinates(sender, e);
+            Point point= GetCoordinates(sender, e);
+            X = point.X;
+            Y = point.Y;
+            check = true;
         }
+
 
         private Point GetCoordinates(object sender, PointerRoutedEventArgs e)
         {
@@ -59,6 +123,5 @@ namespace Control
             }
             return position;
         }
-
     }
 }
