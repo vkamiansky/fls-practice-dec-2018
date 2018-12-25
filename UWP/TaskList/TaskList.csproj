@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CompositionRoot.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -145,10 +146,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -156,14 +153,24 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TaskList.Integration\TaskList.Integration.csproj">
-      <Project>{40d6e602-1812-4775-9cee-0dc3cba6d08e}</Project>
-      <Name>TaskList.Integration</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TaskList.Interface\TaskList.Interface.csproj">
       <Project>{a083e670-cabe-4953-9715-70dc484a78d5}</Project>
       <Name>TaskList.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TaskList.Service\TaskList.Service.csproj">
+      <Project>{2c676250-4e89-47e7-a7a5-efaa97999605}</Project>
+      <Name>TaskList.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskList.ViewModel\TaskList.ViewModel.csproj">
+      <Project>{8416e375-2c96-42da-872c-890f688e0c64}</Project>
+      <Name>TaskList.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

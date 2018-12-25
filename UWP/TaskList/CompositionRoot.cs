@@ -2,7 +2,6 @@
 using Autofac;
 using TaskList.Interface;
 using TaskList.Service;
-using TaskList.View;
 using TaskList.ViewModel;
 using Windows.UI.Xaml.Controls;
 
