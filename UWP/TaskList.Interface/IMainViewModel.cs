@@ -4,7 +4,8 @@ using System.Text;
 
 namespace TaskList.Interface
 {
-    public interface IMainViewModel
+    public interface IMainViewModel : IViewModel
     {
+        INavigationService NavigationService { set; get; }
     }
 }
