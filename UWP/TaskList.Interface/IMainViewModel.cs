@@ -7,5 +7,7 @@ namespace TaskList.Interface
     public interface IMainViewModel : IViewModel
     {
         INavigationService NavigationService { set; get; }
+
+        void StartNavigation();
     }
 }
