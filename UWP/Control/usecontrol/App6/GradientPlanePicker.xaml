@@ -1,0 +1,50 @@
+﻿<UserControl
+    x:Class="App6.GradientPlanePicker"
+   
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App6"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="600">
+    
+    
+                <Canvas x:Name="canv"  Height="500" Width="500">
+                    <Grid x:Name="grid" BorderThickness="1" Height="500" Width="500"  PointerMoved="grid_PointerMoved" PointerPressed="grid_PointerPressed">
+                        <Canvas Background="Transparent">
+                            <Rectangle x:Name="rec1" Stroke="Black" StrokeThickness="2"  Height="500" Width="500">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                        <GradientStop Color="Blue" Offset="0"/>
+                                        <GradientStop Color="#FF6517EE" Offset="0.5"/>
+                                        <GradientStop Color="Orange" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle x:Name="rec2" Stroke="Black" StrokeThickness="2" Height="500" Width="500">
+                                <Rectangle.Fill >
+                                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                                        <GradientStop Color="Transparent" Offset="0"/>
+                                        <GradientStop Color="White" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Line x:Name="l1" Stroke="White" X1="250" Y1="0" X2="250" Y2="500" StrokeThickness="0.5"/>
+                            <Line x:Name="l2" Stroke="White" X1="0" Y1="250" X2="500" Y2="250" StrokeThickness="0.5"/>
+                            <Ellipse x:Name="round" Height="20" Width="20" Stroke="LightGray" StrokeThickness="4" Canvas.Left="{Binding Path= X}" Canvas.Top="{Binding Path= Y}"/>
+                        </Canvas>
+                    </Grid>
+                    <TextBlock x:Name="tb1" Text="Важность" FontSize="40" Height="56" Width="490" TextAlignment="Center" Canvas.Top="500"/>
+                    <TextBlock x:Name="tb2" Text="Срочность" FontSize="40" TextWrapping="Wrap" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="56" Width="490" UseLayoutRounding="False" d:LayoutRounding="Auto" Canvas.Left="-270" Canvas.Top="220">
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform Rotation="-90"/>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </Canvas>
+          
+
+
+   
+</UserControl>
