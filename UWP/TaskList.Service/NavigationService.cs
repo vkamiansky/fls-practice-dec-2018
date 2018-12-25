@@ -8,7 +8,7 @@ namespace TaskList.Service
     public class NavigationService : INavigationService
     {
         private Frame frame;
-        private IIndex<string,Page> index;
+        private IIndex<string, Page> index;
 
         public NavigationService(Frame frame, IIndex<string, Page> index)
         {

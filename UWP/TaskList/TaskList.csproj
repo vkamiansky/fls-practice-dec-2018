@@ -158,7 +158,7 @@
       <Name>TaskList.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\TaskList.Service\TaskList.Service.csproj">
-      <Project>{2c676250-4e89-47e7-a7a5-efaa97999605}</Project>
+      <Project>{6da773b3-053c-45cd-a1a0-7c521d782e1c}</Project>
       <Name>TaskList.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\TaskList.ViewModel\TaskList.ViewModel.csproj">
