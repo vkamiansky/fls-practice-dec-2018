@@ -10,22 +10,19 @@ namespace TaskList.Integration
 {
     public class CompositionRoot
     {
-        private static IContainer container;
-
         public static IMainViewModel GetMainViewModel(Frame frame)
         {
-            if (container == null)
-                container = BuildContainer();
+            IContainer container = BuildContainer(frame);
 
             var mainViewModel = container.Resolve<IMainViewModel>();
-            mainViewModel.NavigationService = container.
+            /*mainViewModel.NavigationService = container.
                 Resolve<INavigationService>(
                 new NamedParameter("frame", frame));
-
+            */
             return mainViewModel;
         }
 
-        private static IContainer BuildContainer()
+        private static IContainer BuildContainer(Frame frame)
         {
             var containerBuilder = new ContainerBuilder();
 
@@ -38,7 +35,7 @@ namespace TaskList.Integration
             containerBuilder.
                 RegisterType<MainPage>().
                 Keyed<Page>(PageKeys.MainPage);
-
+            
             // Добавление MainViewModel
             containerBuilder.
                  RegisterType<MainViewModel>().
