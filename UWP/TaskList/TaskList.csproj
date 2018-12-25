@@ -155,12 +155,6 @@
       <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TaskList.Integration\TaskList.Integration.csproj">
-      <Project>{e659aa04-4d74-4791-aa27-64268b0e7531}</Project>
-      <Name>TaskList.Integration</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
