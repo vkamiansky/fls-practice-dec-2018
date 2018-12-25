@@ -155,6 +155,16 @@
       <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaskList.Integration\TaskList.Integration.csproj">
+      <Project>{40d6e602-1812-4775-9cee-0dc3cba6d08e}</Project>
+      <Name>TaskList.Integration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskList.Interface\TaskList.Interface.csproj">
+      <Project>{a083e670-cabe-4953-9715-70dc484a78d5}</Project>
+      <Name>TaskList.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
