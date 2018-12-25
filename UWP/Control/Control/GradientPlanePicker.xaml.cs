@@ -95,10 +95,11 @@ namespace Control
 
         private void grid_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
+
             Point point= GetCoordinates(sender, e);
             X = point.X;
             Y = point.Y;
-            check = true;
+            check = !check;
         }
 
 

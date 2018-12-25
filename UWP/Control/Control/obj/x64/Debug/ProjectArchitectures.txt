@@ -1,1 +1,1 @@
-D:\fls-practice-dec-2018\UWP\Control\Control\Control.csproj;x64
+C:\Users\kanter\Desktop\UWP\Control\Control\Control.csproj;x64

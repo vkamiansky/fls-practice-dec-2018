@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>46419f6b-328c-4916-923d-3584f162daed</PackageIdentityName>
     <PackageIdentityPublisher>CN=alexg</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\fls-practice-dec-2018\UWP\Control\Control\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\kanter\Desktop\UWP\Control\Control\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>95BAE178BC77CA1FCA86F08EC2A7A36A1E37EFAAE836F8456ACA921DB77398BC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>46419f6b-328c-4916-923d-3584f162daed_1.0.0.0_x64__9dbwxr0dvqxpe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>46419f6b-328c-4916-923d-3584f162daed_9dbwxr0dvqxpe!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-12-25T17:31:38.288</Modified>
+      <Modified>2018-12-25T18:35:59.068</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\Control.exe">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\Control.exe">
       <PackagePath>entrypoint\Control.exe</PackagePath>
-      <Modified>2018-12-25T17:31:37.802</Modified>
+      <Modified>2018-12-25T18:35:58.508</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kanter\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -498,71 +498,71 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2018-10-22T22:33:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-12-25T13:48:42.073</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2018-12-25T13:48:42.064</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-12-25T13:48:42.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-12-25T13:48:42.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-12-25T13:48:42.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-12-25T13:48:42.066</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-12-25T13:48:42.066</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-12-25T13:48:42.067</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\Control.xr.xml">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\Control.xr.xml">
       <PackagePath>Control.xr.xml</PackagePath>
-      <Modified>2018-12-25T17:28:26.948</Modified>
+      <Modified>2018-12-25T18:35:58.360</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-12-25T17:31:37.680</Modified>
+      <Modified>2018-12-25T18:35:58.367</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\GradientPlanePicker.xbf">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\GradientPlanePicker.xbf">
       <PackagePath>GradientPlanePicker.xbf</PackagePath>
-      <Modified>2018-12-25T17:31:37.680</Modified>
+      <Modified>2018-12-25T18:35:58.367</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-12-25T17:31:37.681</Modified>
+      <Modified>2018-12-25T18:35:58.367</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-10-22T21:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2018-12-25T15:44:26.016</Modified>
+      <Modified>2018-12-25T18:32:43.715</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\fls-practice-dec-2018\UWP\Control\Control\bin\x64\Debug\Core\Control.exe">
+    <AppxPackagedFile Include="C:\Users\kanter\Desktop\UWP\Control\Control\bin\x64\Debug\Core\Control.exe">
       <PackagePath>Control.exe</PackagePath>
-      <Modified>2018-12-25T17:31:38.284</Modified>
+      <Modified>2018-12-25T18:35:59.065</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

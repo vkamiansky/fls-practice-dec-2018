@@ -11,6 +11,6 @@
     <Page.DataContext>
         <local:TestViewModel X="0.0" Y="0.0" X_Title="Важность" Y_Title="Нужность"/>
     </Page.DataContext>
-    <customControl1:GradientPlanePicker X="{Binding X}" Y="{Binding Y}" X_Title="{Binding X_Title}" Y_Title="{Binding Y_Title}"/>
+    <customControl1:GradientPlanePicker X="{Binding X, Mode=TwoWay}" Y="{Binding Y, Mode=TwoWay}" X_Title="{Binding X_Title,Mode=TwoWay}" Y_Title="{Binding Y_Title,Mode=TwoWay}"/>
 
 </Page>
