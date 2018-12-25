@@ -8,5 +8,10 @@ namespace TaskList.ViewModel
     public class MainViewModel : IMainViewModel
     {
         INavigationService IMainViewModel.NavigationService { set; get; }
+
+        public void StartNavigation()
+        {
+            
+        }
     }
 }
