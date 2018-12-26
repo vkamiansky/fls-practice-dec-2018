@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="Control.MainPage"
+    xmlns:local="using:Control.ViewModel" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+ xmlns:customControl1="using:Control"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <local:TestViewModel X="0.0" Y="0.0" X_Title="Важность" Y_Title="Нужность"/>
+    </Page.DataContext>
+    <customControl1:GradientPlanePicker X="{Binding X, Mode=TwoWay}" Y="{Binding Y, Mode=TwoWay}" X_Title="{Binding X_Title,Mode=TwoWay}" Y_Title="{Binding Y_Title,Mode=TwoWay}"/>
+
+</Page>
