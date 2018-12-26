@@ -7,19 +7,19 @@ using TaskList.Model;
 
 namespace TaskList.ViewModel
 {
-    public class TestTaskListViewModel : INotifyPropertyChanged, ITestTaskListViewModel
+    public class TestTaskListViewModel : INotifyPropertyChanged, ITaskListViewModel
     {
         private const string SOMETEXT = "Lorem ipsum dolor sit amet, consectetur " +
             "adipiscing elit. Duis gravida nisl sed egestas placerat. Aenean mattis " +
             "imperdiet lacus. Morbi iaculis urna id ex dapibus pretium.";
 
-        public ObservableCollection<TaskModel> Tasks { get; set; }
+        public ObservableCollection<TaskInfoViewModel> Tasks { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private TaskModel selectedTask;
+        private TaskInfoViewModel selectedTask;
 
-        public TaskModel SelectedTask
+        public TaskInfoViewModel SelectedTask
         {
             get => selectedTask;
             set
@@ -31,11 +31,11 @@ namespace TaskList.ViewModel
 
         public TestTaskListViewModel()
         {
-            Tasks = new ObservableCollection<TaskModel>
+            Tasks = new ObservableCollection<TaskInfoViewModel>
             {
-                new TaskModel("Первый заголовок",SOMETEXT),
-                new TaskModel("Второй заголовок",SOMETEXT),
-                new TaskModel("Третий заголовок",SOMETEXT)
+                new TaskInfoViewModel("Первый заголовок",SOMETEXT),
+                new TaskInfoViewModel("Второй заголовок",SOMETEXT),
+                new TaskInfoViewModel("Третий заголовок",SOMETEXT)
             };
         }
 
