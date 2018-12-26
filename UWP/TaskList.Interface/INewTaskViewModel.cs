@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TaskList.Interface
 {
-    public interface ITestNewTaskViewModel
+    public interface INewTaskViewModel
     {
     }
 }
