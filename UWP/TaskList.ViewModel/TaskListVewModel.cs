@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TaskList.Interface
+namespace TaskList.ViewModel
 {
-    interface IRepository
+    class TaskListVewModel
     {
     }
 }
