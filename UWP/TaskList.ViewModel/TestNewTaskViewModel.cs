@@ -35,7 +35,31 @@ namespace TaskList.ViewModel
             }
         }
 
-        
+        private int x;
+
+        public int X
+        {
+            get => x;
+            set
+            {
+                x = value;
+                OnPropertyChanged("X");
+            }
+        }
+
+        private int y;
+
+        public int Y
+        {
+            get => y;
+            set
+            {
+                y = value;
+                OnPropertyChanged("Y");
+            }
+        }
+
+
         private void OnPropertyChanged([CallerMemberName]string prop = "")
         {
             if (PropertyChanged != null)
