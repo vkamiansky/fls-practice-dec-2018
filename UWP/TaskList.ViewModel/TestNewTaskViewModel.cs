@@ -11,7 +11,7 @@ namespace TaskList.ViewModel
     {           
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string name;
+        private string name = "New task";
 
         public string Name
         {
@@ -23,7 +23,7 @@ namespace TaskList.ViewModel
             }
         }
 
-        private string description;
+        private string description = "wegfeargaergergerkgjegfeargaergergerkgjwoerjgpaerioagegfeargaergergerkgjwoerjgpaerioagegfeargaergergerkgjwoerjgpaerioagwoerjgpaerioagjeoirgjeropigja[wthatehthsthsrthsrthsrthsrhsr";
 
         public string Description
         {
@@ -35,7 +35,7 @@ namespace TaskList.ViewModel
             }
         }
 
-        private int x;
+        private int x = 50;
 
         public int X
         {
@@ -47,7 +47,7 @@ namespace TaskList.ViewModel
             }
         }
 
-        private int y;
+        private int y = 62;
 
         public int Y
         {
