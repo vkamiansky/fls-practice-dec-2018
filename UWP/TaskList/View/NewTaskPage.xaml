@@ -8,23 +8,32 @@
     mc:Ignorable="d"
  xmlns:customControl1="using:TaskList"
     
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1084" Width="1594">
-    <StackPanel Margin="20">
-        <TextBlock Text="Создание новой задачи" TextAlignment="Center" FontSize="40"/>
-        <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
-            <TextBlock Text="Введите название новой задачи:" FontSize="30"/>
-            <TextBox Text="{Binding NewTaskName, Mode=TwoWay}" FontSize="30" HorizontalAlignment="Stretch" Margin="0,0,-1101,0" VerticalAlignment="Stretch" TextAlignment="Left"/>
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel>
+
+        <TextBlock Text="Создание новой задачи" TextAlignment="Center" FontSize="25" FontWeight="Bold"/>
+        
+        <StackPanel>
+            <TextBlock Text="Введите название новой задачи:" FontSize="15"/>
+            <TextBox Text="{Binding NewTaskName, Mode=TwoWay}" FontSize="15"/>
         </StackPanel>
-        <TextBlock Text="Введите описание новой задачи:" FontSize="30" Margin="0 10 0 20"/>
-        <TextBox Text="{Binding NewTaskDescription, Mode=TwoWay}" FontSize="30" Height="200"/>
-        <TextBlock Text="Задайте необходимость и срочность выполнения задачи на плоскости Эйзенхауэра" FontSize="30"/>
-        <StackPanel Orientation="Horizontal">
-        <customControl1:GradientPlanePicker X="{Binding X, Mode=TwoWay}" Y="{Binding Y, Mode=TwoWay}" Loaded="GradientPlanePicker_Loaded" Margin="100 0 0 0">
-            <customControl1:GradientPlanePicker.RenderTransform>
-                <CompositeTransform Rotation="0"/>
-            </customControl1:GradientPlanePicker.RenderTransform>
-        </customControl1:GradientPlanePicker>
-            <Button Height="100" Width="200" Content="Создать" FontSize="30" Margin="300 0 0 0" Command="{Binding CreateTaskCommand}"/>
+
+        <StackPanel>
+            <TextBlock Text="Введите описание новой задачи:" FontSize="15"/>
+            <TextBox Text="{Binding NewTaskDescription, Mode=TwoWay}" FontSize="15"/>
         </StackPanel>
+
+        <StackPanel>
+            <TextBlock Text="Задайте необходимость и срочность выполнения задачи на плоскости Эйзенхауэра" FontSize="15"/>
+            <StackPanel Orientation="Horizontal">
+                <customControl1:GradientPlanePicker X="{Binding X, Mode=TwoWay}" Y="{Binding Y, Mode=TwoWay}" Loaded="GradientPlanePicker_Loaded">
+                    <customControl1:GradientPlanePicker.RenderTransform>
+                        <CompositeTransform Rotation="0"/>
+                    </customControl1:GradientPlanePicker.RenderTransform>
+                </customControl1:GradientPlanePicker>
+            <Button Height="75" Width="125" Content="Создать" FontSize="15" Command="{Binding CreateTaskCommand}"/>
+            </StackPanel>
+        </StackPanel>
+
     </StackPanel>
 </Page>
