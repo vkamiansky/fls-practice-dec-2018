@@ -9,7 +9,7 @@ namespace TaskList.Interface
 {
    public interface ITaskRepository
     {
-       ObservableCollection<DataTask> ReadAllTasks();
+       List<DataTask> ReadAllTasks();
        DataTask ReadTask(string name);
        void AddTask(DataTask task);
        void DeleteTask(string name);

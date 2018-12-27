@@ -13,9 +13,9 @@ namespace TaskList.Service
     {
         ITaskRepository idataTask;
         
-        public ObservableCollection<Task> ReadAllTask()
+        public List<Task> ReadAllTask()
         {
-            ObservableCollection<Task> tasks = new ObservableCollection<Task>();
+            List<Task> tasks = new List<Task>();
             var r = idataTask.ReadAllTasks();
             foreach(var it in r)
             {

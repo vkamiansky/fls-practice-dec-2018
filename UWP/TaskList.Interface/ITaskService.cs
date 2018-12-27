@@ -8,7 +8,7 @@ namespace TaskList.Interface
 {
     public interface ITaskService
     {
-        ObservableCollection<Task> ReadAllTask();
+        List<Task> ReadAllTask();
         Task ReadTask(string name);
         void AddTask(Task task);
         void DeleteTask(string name);

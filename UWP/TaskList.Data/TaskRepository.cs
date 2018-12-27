@@ -42,10 +42,10 @@ namespace TaskList.Data
                 return null;
         }
 
-         public ObservableCollection<DataTask> ReadAllTasks()
+         public List<DataTask> ReadAllTasks()
          {
             string[] allFoundFiles = Directory.GetFiles(@"../DataJson/",@"*.json" , SearchOption.AllDirectories);
-            ObservableCollection<DataTask> tasks = new ObservableCollection<DataTask>();
+            List<DataTask> tasks = new List<DataTask>();
             foreach (string path in allFoundFiles)
             {
                 DataTask tsk = DeserializeTask(File.ReadAllText(path));
