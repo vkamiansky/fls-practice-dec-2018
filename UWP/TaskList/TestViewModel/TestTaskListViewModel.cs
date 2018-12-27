@@ -9,8 +9,6 @@ namespace TaskList.TestViewModel
 {
     public class TestTaskListViewModel : INotifyPropertyChanged, ITaskListViewModel
     {
-        public INavigationService NavigationService { set; private get; }
-
         private const string SOMETEXT = "Lorem ipsum dolor sit amet, consectetur " +
             "adipiscing elit. Duis gravida nisl sed egestas placerat. Aenean mattis " +
             "imperdiet lacus. Morbi iaculis urna id ex dapibus pretium.";
@@ -20,7 +18,18 @@ namespace TaskList.TestViewModel
         public event PropertyChangedEventHandler PropertyChanged;
 
         private string backButtonContext;
+        private string pageTitle;
         private TaskInfoViewModel selectedTask;
+
+        public string PageTitle
+        {
+            get => pageTitle;
+            set
+            {
+                pageTitle = value;
+                OnPropertyChanged("PageTitle");
+            }
+        }
 
         public TaskInfoViewModel SelectedTask
         {
@@ -46,13 +55,16 @@ namespace TaskList.TestViewModel
 
         public TestTaskListViewModel()
         {
-             this.BackButtonContext = "Вернуться на главную";
+            this.BackButtonContext = "Вернуться на главную";
+            this.PageTitle = "Список всех заданий";
 
             this.Tasks = new ObservableCollection<TaskInfoViewModel>
             {
-                new TaskInfoViewModel("Первый заголовок",SOMETEXT),
-                new TaskInfoViewModel("Второй заголовок",SOMETEXT),
-                new TaskInfoViewModel("Третий заголовок",SOMETEXT)
+                new TaskInfoViewModel("Первый заголовок",SOMETEXT, "Важно"),
+                new TaskInfoViewModel("Второй заголовок",SOMETEXT, "Важно"),
+                new TaskInfoViewModel("Третий заголовок",SOMETEXT, "Очень важно"),
+                new TaskInfoViewModel("Четвертый заголовок",SOMETEXT, "Важно"),
+                new TaskInfoViewModel("Пятый заголовок",SOMETEXT, "Очень важно")
             };
         }
 
