@@ -1,11 +1,10 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 using TaskList.Interface;
-using TaskList.Model;
+using TaskList.ViewModel;
 
-namespace TaskList.ViewModel
+namespace TaskList.TestViewModel
 {
     public class TestTaskListViewModel : INotifyPropertyChanged, ITaskListViewModel
     {
