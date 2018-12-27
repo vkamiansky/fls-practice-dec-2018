@@ -8,7 +8,48 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Компонент, отвечающий за Tasks-->
+        <StackPanel Orientation="Vertical" Grid.RowSpan="2" Margin="20 50 20 0">
+            <ListBox Name="TaskList" ItemsSource="{Binding Tasks}" 
+                     SelectedItem="{Binding SelectedTask, Mode=TwoWay}"
+                     SelectionMode="Single" MaxHeight="585">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10" Height="70">
+                            <TextBlock Text="{Binding Title}" Foreground="Black"
+                                       FontSize="25" TextWrapping="Wrap"
+                                       TextAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding Description}" Foreground="Gray"
+                                       FontSize="20" TextWrapping="NoWrap"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        
+        <!--Выбранный Task-->
+        <StackPanel Grid.Column="1" Margin="20 50 20 0" Height="400">
+            <TextBlock Text="{Binding SelectedTask.Title}"
+                       Foreground="Black" FontSize="25" TextWrapping="Wrap"
+                       TextAlignment="Center" HorizontalAlignment="Center"/>
 
+            <TextBlock Text="{Binding SelectedTask.Description}" Foreground="Gray"
+                                       FontSize="20" TextWrapping="Wrap"/>
+            
+        </StackPanel>
+
+        <!--Возврат обратно-->
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Button Content="{Binding BackButtonContext}" Command="{Binding BackCommand}"/>
+        </StackPanel>
     </Grid>
 </Page>

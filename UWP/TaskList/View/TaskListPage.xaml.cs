@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TaskList.TestViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -24,6 +25,7 @@ namespace TaskList.View
     {
         public TaskListPage()
         {
+            this.DataContext = new TestTaskListViewModel();
             this.InitializeComponent();
         }
     }
