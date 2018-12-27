@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TaskList.Integration;
+using TaskList.View;
 
 namespace TaskList
 {
@@ -67,7 +68,11 @@ namespace TaskList
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    CompositionRoot.GetMainViewModel(rootFrame).StartNavigation();
+                    var page = new TaskListPage();
+                    page.DataContext = new TestViewModel.TestTaskListViewModel();
+                    rootFrame.Navigate(page.GetType());
+
+                    //CompositionRoot.GetMainViewModel(rootFrame).StartNavigation();
                     
                 }
                 // Ensure the current window is active
