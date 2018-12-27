@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using TaskList.Interface;
 using TaskList.ViewModel;
 
@@ -8,6 +9,8 @@ namespace TaskList.TestViewModel
 {
     public class TestTaskListViewModel : INotifyPropertyChanged, ITaskListViewModel
     {
+        public INavigationService NavigationService { set; private get; }
+
         private const string SOMETEXT = "Lorem ipsum dolor sit amet, consectetur " +
             "adipiscing elit. Duis gravida nisl sed egestas placerat. Aenean mattis " +
             "imperdiet lacus. Morbi iaculis urna id ex dapibus pretium.";
@@ -16,6 +19,7 @@ namespace TaskList.TestViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private string backButtonContext;
         private TaskInfoViewModel selectedTask;
 
         public TaskInfoViewModel SelectedTask
@@ -28,9 +32,23 @@ namespace TaskList.TestViewModel
             }
         }
 
+        public string BackButtonContext
+        {
+            get => backButtonContext;
+            private set 
+            {
+                backButtonContext = value;
+                OnPropertyChanged("BackButtonContext");
+            }
+        }
+
+        public ICommand Back { get; private set; }
+
         public TestTaskListViewModel()
         {
-            Tasks = new ObservableCollection<TaskInfoViewModel>
+             this.BackButtonContext = "Вернуться на главную";
+
+            this.Tasks = new ObservableCollection<TaskInfoViewModel>
             {
                 new TaskInfoViewModel("Первый заголовок",SOMETEXT),
                 new TaskInfoViewModel("Второй заголовок",SOMETEXT),
