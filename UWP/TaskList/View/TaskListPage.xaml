@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="{Binding PageTitle}" FontSize="30"/>
+            <TextBlock Text="Список всех заданий" FontSize="30"/>
         </StackPanel>
         
         <!-- Компонент, отвечающий за Tasks-->
@@ -60,7 +60,7 @@
         <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Margin="50" Height="60" Width="250" FontSize="20" Background="Beige"
                     BorderBrush="Black" BorderThickness="0.5"
-                    Content="{Binding BackButtonContext}" Command="{Binding BackCommand}" >
+                    Content="Вернуться на главную" Command="{Binding BackCommand}" >
             </Button>
         </StackPanel>
     </Grid>
