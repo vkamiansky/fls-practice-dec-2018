@@ -4,13 +4,15 @@ using Newtonsoft.Json;
 using System.IO;
 using TaskList.DataModel;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace TaskList.Data
 {
     public class TaskRepository: ITaskRepository
     {
 
-        public void AddTask(DataModelTask task)
+        public void AddTask(DataTask task)
         {
             SaveInJson(task);
         }
@@ -23,7 +25,7 @@ namespace TaskList.Data
             }
         }
 
-        public void SaveInJson(DataModelTask task)
+        public void SaveInJson(DataTask task)
         {
             string json = JsonConvert.SerializeObject(task);
             using (StreamWriter file = File.CreateText(@"../DataJson/"+task.Name+ ".json"))
@@ -33,20 +35,20 @@ namespace TaskList.Data
             }
         }
 
-        public DataModelTask ReadTask(string name)
+        public DataTask ReadTask(string name)
         {
             if (SearchTaskOfName(name)) return DeserializeTask(File.ReadAllText(@"../DataJson/" + name + ".json"));
             else
                 return null;
         }
 
-         public List<DataModelTask> ReadAllTasks()
+         public ObservableCollection<DataTask> ReadAllTasks()
          {
             string[] allFoundFiles = Directory.GetFiles(@"../DataJson/",@"*.json" , SearchOption.AllDirectories);
-            List<DataModelTask> tasks = new List<DataModelTask>();
+            ObservableCollection<DataTask> tasks = new ObservableCollection<DataTask>();
             foreach (string path in allFoundFiles)
             {
-                DataModelTask tsk = DeserializeTask(File.ReadAllText(path));
+                DataTask tsk = DeserializeTask(File.ReadAllText(path));
                 if (tsk != null)
                 {
                     tasks.Add(tsk);
@@ -55,11 +57,11 @@ namespace TaskList.Data
             return tasks;
          }
 
-        public DataModelTask DeserializeTask(string path)
+        public DataTask DeserializeTask(string path)
         {
             try
             {
-                return JsonConvert.DeserializeObject<DataModelTask>(path);
+                return JsonConvert.DeserializeObject<DataTask>(path);
             }
             catch(Exception ex)
             {
@@ -67,16 +69,16 @@ namespace TaskList.Data
             }
         }
 
-        public void ChangeTask(DataModelTask task)
-        {
-            DataModelTask oldTask = ReadTask(task.Name);
-            if (oldTask!=null)
-            {
-                DeleteTask(oldTask.Name);
-                SaveInJson(task);
-            }
+        //public void ChangeTask(DataModelTask task)
+        //{
+        //    DataModelTask oldTask = ReadTask(task.Name);
+        //    if (oldTask!=null)
+        //    {
+        //        DeleteTask(oldTask.Name);
+        //        SaveInJson(task);
+        //    }
            
-        }
+        //}
 
 
         public bool SearchTaskOfName(string name)
@@ -96,7 +98,7 @@ namespace TaskList.Data
         {
             try
             {
-                ReadAllTasks().Find(x => x.Id == Id);
+                ReadAllTasks().ToArray().Where(x=>x.Id==Id);
                 return true;
             }
             catch (Exception ex)
