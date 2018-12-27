@@ -2,6 +2,6 @@
 {
     public enum PageKeys
     {
-        MainPage,NewTaskPage
+        MainPage,NewTaskPage,TaskListPage
     }
 }
