@@ -13,13 +13,13 @@
         <TextBlock Text="Создание новой задачи" TextAlignment="Center" FontSize="40"/>
         <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
             <TextBlock Text="Введите название новой задачи:" FontSize="30"/>
-            <TextBox x:Name="NewTaskName" FontSize="30" HorizontalAlignment="Stretch" Margin="0,0,-1101,0" VerticalAlignment="Stretch" TextAlignment="Left"/>
+            <TextBox Text="{Binding NewTaskName, Mode=TwoWay}" FontSize="30" HorizontalAlignment="Stretch" Margin="0,0,-1101,0" VerticalAlignment="Stretch" TextAlignment="Left"/>
         </StackPanel>
         <TextBlock Text="Введите описание новой задачи:" FontSize="30" Margin="0 10 0 20"/>
-        <TextBox x:Name="NewTaskDescription" FontSize="30" Height="200"/>
+        <TextBox Text="{Binding NewTaskDescription, Mode=TwoWay}" FontSize="30" Height="200"/>
         <TextBlock Text="Задайте необходимость и срочность выполнения задачи на плоскости Эйзенхауэра" FontSize="30"/>
         <StackPanel Orientation="Horizontal">
-        <customControl1:GradientPlanePicker x:Name="GradientPlanePicker" Loaded="GradientPlanePicker_Loaded" Margin="100 0 0 0">
+        <customControl1:GradientPlanePicker X="{Binding X, Mode=TwoWay}" Y="{Binding Y, Mode=TwoWay}" Loaded="GradientPlanePicker_Loaded" Margin="100 0 0 0">
             <customControl1:GradientPlanePicker.RenderTransform>
                 <CompositeTransform Rotation="0"/>
             </customControl1:GradientPlanePicker.RenderTransform>
