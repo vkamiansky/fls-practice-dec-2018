@@ -42,7 +42,7 @@ namespace TaskList.TestViewModel
             }
         }
 
-        public ICommand Back { get; private set; }
+        public ICommand BackCommand { get; private set; }
 
         public TestTaskListViewModel()
         {
