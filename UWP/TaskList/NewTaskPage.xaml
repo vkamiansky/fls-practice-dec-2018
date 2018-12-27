@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="TaskList.NewTaskPage"
+    xmlns:local="using:TaskList.ViewModel" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+ xmlns:customControl1="using:TaskList"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1084" Width="1594">
+    <Page.DataContext>
+        <local:TestViewModel X="0.0" Y="0.0" X_Title="Важность" Y_Title="Нужность"/>
+    </Page.DataContext>
+    <customControl1:GradientPlanePicker X="{Binding X, Mode=TwoWay}" Y="{Binding Y, Mode=TwoWay}" X_Title="{Binding X_Title,Mode=TwoWay}" Y_Title="{Binding Y_Title,Mode=TwoWay}" Loaded="GradientPlanePicker_Loaded" Margin="489,246,489,246" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <customControl1:GradientPlanePicker.RenderTransform>
+            <CompositeTransform Rotation="0"/>
+        </customControl1:GradientPlanePicker.RenderTransform>
+    </customControl1:GradientPlanePicker>
+
+</Page>

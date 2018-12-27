@@ -26,6 +26,7 @@ namespace TaskList.Integration
             var containerBuilder = new ContainerBuilder();
 
             containerBuilder.RegisterType<MainPage>().Keyed<Page>("MainPage");
+            containerBuilder.RegisterType<NewTaskPage>().Keyed<Page>("NewTaskPage");
 
             // Место для добавления сервисов
             containerBuilder.
