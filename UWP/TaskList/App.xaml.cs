@@ -68,9 +68,7 @@ namespace TaskList
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    var page = new TaskListPage();
-                    page.DataContext = new TestViewModel.TestTaskListViewModel();
-                    rootFrame.Navigate(page.GetType());
+                    rootFrame.Navigate(typeof(TaskListPage));
 
                     //CompositionRoot.GetMainViewModel(rootFrame).StartNavigation();
                     
