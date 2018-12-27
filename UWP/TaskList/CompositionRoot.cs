@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Reflection;
 using Autofac;
+using TaskList.Data;
 using TaskList.Interface;
 using TaskList.Service;
 using TaskList.ViewModel;
@@ -24,20 +26,40 @@ namespace TaskList.Integration
         private static IContainer BuildContainer(Frame frame)
         {
             var containerBuilder = new ContainerBuilder();
+            var taskListAssembly = Assembly.GetExecutingAssembly();
+            var serviceAssembly = Assembly.GetAssembly(typeof(NavigationService));
+            var repositoryAssembly = Assembly.GetAssembly(typeof(TaskRepository));
+            var viewModelAssembly = Assembly.GetAssembly(typeof(MainViewModel));
 
-            containerBuilder.RegisterType<MainPage>().Keyed<Page>("MainPage");
-            containerBuilder.RegisterType<NewTaskPage>().Keyed<Page>("NewTaskPage");
+            //Место для добавления Page
+            containerBuilder.RegisterAssemblyTypes(taskListAssembly).Where(t => t.Name.EndsWith("Page", 
+                     StringComparison.CurrentCultureIgnoreCase)).Keyed<Page>(x => x.Name);
+
+
+
 
             // Место для добавления сервисов
-            containerBuilder.
-                RegisterType<NavigationService>().
-                As<INavigationService>().WithParameter("frame", frame);
+            containerBuilder.RegisterAssemblyTypes(serviceAssembly).Where(t => t.Name.EndsWith("Service",
+                    StringComparison.CurrentCultureIgnoreCase)).AsImplementedInterfaces().WithParameter("frame",frame);
+
+
+            //containerBuilder.
+            //    RegisterType<NavigationService>().
+            //    As<INavigationService>().WithParameter("frame", frame);
 
 
             // Добавление MainViewModel
-            containerBuilder.
-                 RegisterType<MainViewModel>().
-                 As<IMainViewModel>().PropertiesAutowired();
+            containerBuilder.RegisterAssemblyTypes(viewModelAssembly).Where(t => t.Name.EndsWith("ViewModel",
+                    StringComparison.InvariantCultureIgnoreCase)).AsImplementedInterfaces().PropertiesAutowired();
+
+            //containerBuilder.
+            //     RegisterType<MainViewModel>().
+            //     As<IMainViewModel>().PropertiesAutowired();
+
+            //добавление Repository
+            containerBuilder.RegisterAssemblyTypes(repositoryAssembly).Where(t => t.Name.EndsWith("Repository",
+                    StringComparison.CurrentCultureIgnoreCase)).AsImplementedInterfaces();
+
 
             return containerBuilder.Build();
         }

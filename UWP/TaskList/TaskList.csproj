@@ -11,7 +11,7 @@
     <AssemblyName>TaskList</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -160,6 +160,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TaskList.Data\TaskList.Data.csproj">
+      <Project>{f6dfe006-184a-4964-bd94-4312a1e6bb71}</Project>
+      <Name>TaskList.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TaskList.Interface\TaskList.Interface.csproj">
       <Project>{a083e670-cabe-4953-9715-70dc484a78d5}</Project>
       <Name>TaskList.Interface</Name>
