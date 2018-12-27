@@ -25,7 +25,6 @@ namespace TaskList.View
     {
         public TaskListPage()
         {
-            this.DataContext = new TestTaskListViewModel();
             this.InitializeComponent();
         }
     }
