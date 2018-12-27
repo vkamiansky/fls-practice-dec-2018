@@ -10,6 +10,7 @@ namespace TaskList.ViewModel
     public class TaskInfoViewModel : INotifyPropertyChanged
     {
         private TaskModel task;
+        private string degreeОfImportance;
 
         /// <summary>
         /// Заголовок Задания
@@ -37,11 +38,24 @@ namespace TaskList.ViewModel
             }
         }
 
-        public TaskInfoViewModel(string title, string description)
+        /// <summary>
+        /// Степень важности
+        /// </summary>
+        public string DegreeОfImportance {
+            get => degreeОfImportance;
+            set
+            {
+                this.degreeОfImportance = value;
+                OnPropertyChanged("DegreeОfImportance");
+            }
+        }
+
+        public TaskInfoViewModel(string title, string description, string degreeОfImportance)
         {
             task = new TaskModel();
             this.Title = title;
             this.Description = description;
+            this.DegreeОfImportance = degreeОfImportance;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
