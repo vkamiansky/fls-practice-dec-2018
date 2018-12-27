@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using TaskList.Interface;
 
 namespace TaskList.TestViewModel
@@ -17,6 +18,10 @@ namespace TaskList.TestViewModel
         private double _y;
         private string _newTaskName;
         private string _newTaskDescription;
+
+        public INavigationService NavigationService { get; set; }
+
+        public ICommand CreateTaskCommand { get; private set; }
 
         public double X
         {
