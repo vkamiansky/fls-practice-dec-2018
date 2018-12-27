@@ -17,19 +17,9 @@ namespace TaskList.TestViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string backButtonContext;
-        private string pageTitle;
         private TaskInfoViewModel selectedTask;
 
-        public string PageTitle
-        {
-            get => pageTitle;
-            set
-            {
-                pageTitle = value;
-                OnPropertyChanged("PageTitle");
-            }
-        }
+        public INavigationService NavigationService { get; set; }
 
         public TaskInfoViewModel SelectedTask
         {
@@ -41,23 +31,10 @@ namespace TaskList.TestViewModel
             }
         }
 
-        public string BackButtonContext
-        {
-            get => backButtonContext;
-            private set 
-            {
-                backButtonContext = value;
-                OnPropertyChanged("BackButtonContext");
-            }
-        }
-
         public ICommand BackCommand { get; private set; }
 
         public TestTaskListViewModel()
         {
-            this.BackButtonContext = "Вернуться на главную";
-            this.PageTitle = "Список всех заданий";
-
             this.Tasks = new ObservableCollection<TaskInfoViewModel>
             {
                 new TaskInfoViewModel("Первый заголовок",SOMETEXT, "Важно"),
