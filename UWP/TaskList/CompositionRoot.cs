@@ -50,7 +50,7 @@ namespace TaskList.Integration
 
             // Добавление MainViewModel
             containerBuilder.RegisterAssemblyTypes(viewModelAssembly).Where(t => t.Name.EndsWith("ViewModel",
-                    StringComparison.CurrentCultureIgnoreCase)).PropertiesAutowired();
+                    StringComparison.CurrentCultureIgnoreCase)).AsImplementedInterfaces().PropertiesAutowired();
 
             //containerBuilder.
             //     RegisterType<MainViewModel>().
