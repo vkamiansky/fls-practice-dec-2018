@@ -32,13 +32,13 @@
                     </customControl1:GradientPlanePicker.RenderTransform>
                 </customControl1:GradientPlanePicker>
                 <Button Height="75" Width="165" Content="Создать" FontSize="15" Command="{Binding CreateTaskCommand}" HorizontalAlignment="Left" Margin="102,0,0,0" VerticalAlignment="Center"/>
-                <TextBlock x:Name="textBlock" Margin="-828,0,663,0" Text="Срочность" TextWrapping="Wrap" FontSize="20" Height="34" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock x:Name="textBlock" Margin="-835,0,656,0" Text="Срочность" TextWrapping="Wrap" FontSize="20" Height="34" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <TextBlock.RenderTransform>
                         <CompositeTransform Rotation="-89.544"/>
                     </TextBlock.RenderTransform>
                 </TextBlock>
             </StackPanel>
-            <TextBlock x:Name="textBlock1" Margin="205,0,0,0" Text="Необходимость" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Center" Width="383" Height="33" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="textBlock1" Margin="0,0,0,0" Text="Необходимость" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Center" Width="272" Height="33"/>
         </StackPanel>
 
     </StackPanel>
