@@ -11,9 +11,9 @@ namespace TaskList
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             string importance = "";
-            var urgKey = (ImpKey)value;
+            var impKey = (ImpKey)value;
 
-            switch (urgKey)
+            switch (impKey)
             {
                 case ImpKey.Important:
                     {
