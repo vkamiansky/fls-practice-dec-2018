@@ -11,7 +11,7 @@ namespace TaskList.ViewModel
 
         public void StartNavigation()
         {
-            NavigationService.Navigate(PageKeys.NewTaskPage, this);
+            NavigationService.Navigate(PageKeys.MainPage, this);
         }
     }
 }

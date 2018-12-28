@@ -11,15 +11,15 @@ namespace TaskList.ViewModel.Test
         [Fact]
         public void TestTaskInfoViewModel()
         {
-            ObservableCollection<ITaskInfoViewModel> tasks = new ObservableCollection<ITaskInfoViewModel>();
+            /*ObservableCollection<ITaskInfoViewModel> tasks = new ObservableCollection<ITaskInfoViewModel>();
             TaskInfoViewModel task = new TaskInfoViewModel() { Id = 1, Name = "Test",
-                Description = "TODO", ImportanceMeasure = 400, UrgencyMeasure = 300 };
+                Description = "TODO", ImportanceMeasureX = 400, UrgencyMeasureY = 300 };
             tasks.Add(task);
             var mock = new Mock<ITaskListViewModel>();
             mock.Setup(a => a.Task).Returns
                 (tasks);
 
-
+            */
             //Assert.Equal();
             
 
