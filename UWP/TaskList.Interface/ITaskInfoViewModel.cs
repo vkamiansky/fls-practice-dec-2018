@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using TaskList.Model;
 
@@ -9,8 +10,11 @@ namespace TaskList.Interface
     {
          int Id { get; set; }
          string Name { get; set; }
-         double UrgencyMeasure { get; set; }
-         double ImportanceMeasure { get; set; }
+         double UrgencyMeasureY { get; set; }
+         double ImportanceMeasureX { get; set; }
          string Description { get; set; }
+         ImpKey Importance { get; set; }
+         UrgKey Urgency { get; set; }
+         Color TaskColor { get; set; }
     }
 }
