@@ -74,7 +74,10 @@ namespace TaskList.TestViewModel
 
         public TestNewTaskViewModel()
         {
-
+            NewTaskName = "New Task Name";
+            NewTaskDescription = "New Task Description";
+            ImportanceMeasure = 1;
+            UrgencyMeasure = 1;
         }
 
         private void OnPropertyChanged([CallerMemberName]string prop = "")

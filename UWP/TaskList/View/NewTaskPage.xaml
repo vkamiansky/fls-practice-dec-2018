@@ -10,6 +10,9 @@
     <Page.Background>
         <AcrylicBrush/>
     </Page.Background>
+    <Page.DataContext>
+        <local:TestNewTaskViewModel />
+    </Page.DataContext>
     <StackPanel Margin="50,0,50,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
         <TextBlock Text="Создание новой задачи" TextAlignment="Center" FontSize="25"  FontWeight="Bold"/>
