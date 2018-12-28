@@ -7,6 +7,4 @@ namespace TaskList.Interface
     public interface IViewModel
     {
     }
-
-        
 }
