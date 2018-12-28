@@ -12,7 +12,8 @@ namespace TaskList.Interface
          double UrgencyMeasureY { get; set; }
          double ImportanceMeasureX { get; set; }
          string Description { get; set; }
-         string DegreeОfImportance { get; set; }
+         ImpKey Impotance { get; set; }
+         UrgKey Urgency { get; set; }
          Color TaskColor { get; set; }
     }
 }
