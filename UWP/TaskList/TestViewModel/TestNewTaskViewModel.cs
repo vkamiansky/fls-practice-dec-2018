@@ -10,35 +10,35 @@ using TaskList.Interface;
 
 namespace TaskList.TestViewModel
 {
-    public class TestNewTaskViewModel : INotifyPropertyChanged, ITaskListViewModel
+    public class TestNewTaskViewModel : INotifyPropertyChanged, INewTaskViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private double _x;
-        private double _y;
+        private double _UrgencyMeasure;
+        private double _ImportanceMeasure;
         private string _newTaskName;
         private string _newTaskDescription;
 
         public INavigationService NavigationService { get; set; }
 
-        public ICommand CreateTaskCommand { get; private set; }
+        public ICommand CreateTaskCommand { get; set; }
 
-        public double X
+        public double UrgencyMeasure
         {
-            get { return _x; }
+            get { return _UrgencyMeasure; }
             set
             {
-                _x = value;
-                OnPropertyChanged("X");
+                _UrgencyMeasure = value;
+                OnPropertyChanged("UrgencyMeasure");
             }
         }
-        public double Y
+        public double ImportanceMeasure
         {
-            get { return _y; }
+            get { return _ImportanceMeasure; }
             set
             {
-                _y = value;
-                OnPropertyChanged("Y");
+                _ImportanceMeasure = value;
+                OnPropertyChanged("ImportanceMeasure");
             }
         }
 
