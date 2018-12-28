@@ -25,7 +25,7 @@
 
         <StackPanel Height="630" Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Задайте необходимость и срочность выполнения задачи на плоскости Эйзенхауэра" FontSize="15" Height="22" Margin="0,0,0,0" RenderTransformOrigin="0.497,0.75" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <StackPanel Orientation="Horizontal" Margin="10,0,0,0" HorizontalAlignment="Left" Width="980" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" Margin="10,0,0,0" HorizontalAlignment="Left" Width="918" Height="446">
                 <customControl1:GradientPlanePicker X="{Binding X, Mode=TwoWay}" Y="{Binding Y, Mode=TwoWay}" Loaded="GradientPlanePicker_Loaded" Margin="98,0,-28,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <customControl1:GradientPlanePicker.RenderTransform>
                         <CompositeTransform Rotation="0"/>
