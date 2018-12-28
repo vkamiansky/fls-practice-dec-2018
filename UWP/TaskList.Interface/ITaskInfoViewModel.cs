@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
-using TaskList.Interface;
+using TaskList.Model;
 
 namespace TaskList.Interface
 {
