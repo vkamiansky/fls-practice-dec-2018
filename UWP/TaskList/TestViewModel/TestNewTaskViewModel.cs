@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -66,6 +67,10 @@ namespace TaskList.TestViewModel
                 OnPropertyChanged("NewTaskDescription");
             }
         }
+
+        public ObservableCollection<ITaskInfoViewModel> Tasks { get; set; }
+        public ITaskInfoViewModel SelectedTask { get; set; }
+        public ICommand BackCommand { get; set; }
 
         public TestNewTaskViewModel()
         {

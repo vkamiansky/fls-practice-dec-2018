@@ -9,9 +9,11 @@ using TaskList.Model;
 
 namespace TaskList.ViewModel
 {
-    public class TaskInfoViewModel : INotifyPropertyChanged,ITaskInfoViewModel
+    public class TaskInfoViewModel : INotifyPropertyChanged, ITaskInfoViewModel
     {
         private TaskModel task;
+        private Color color;
+
         private string degreeОfImportance;
         /// <summary>
         /// Id Задания
@@ -28,7 +30,7 @@ namespace TaskList.ViewModel
         {
             get => task.Title;
             set
-            {
+            {                
                 task.Title = value;
                 OnPropertyChanged("Title");
             }
@@ -61,14 +63,25 @@ namespace TaskList.ViewModel
 
         public double UrgencyMeasureY { get; set; }
         public double ImportanceMeasureX { get ; set ; }
-        public Color TaskColor { get ; set; }
 
-        public TaskInfoViewModel(string title, string description, string degreeОfImportance)
+        public Color TaskColor
+        {
+            get => color;
+            set
+            {
+                this.color = value;
+                OnPropertyChanged("TaskColor");
+            }
+        }
+
+        public TaskInfoViewModel(string title, string description, 
+            string degreeОfImportance, Color taskColor)
         {
             task = new TaskModel();
             this.Name = title;
             this.Description = description;
             this.DegreeОfImportance = degreeОfImportance;
+            this.TaskColor = taskColor;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

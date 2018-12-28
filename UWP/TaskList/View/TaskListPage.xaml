@@ -29,13 +29,17 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="10" Height="100" BorderBrush="Black" BorderThickness="0.5" Padding="5">
-                            <TextBlock Text="{Binding Title}" Foreground="Black"
+                            <TextBlock Text="{Binding Name}" Foreground="Black"
                                        FontSize="25" TextWrapping="Wrap"
                                        TextAlignment="Center" HorizontalAlignment="Center"/>
                             <TextBlock Text="{Binding Description}" Foreground="Gray"
                                        FontSize="18" TextWrapping="Wrap" MaxHeight="60" MaxLines="1"/>
-                            <TextBlock Text="{Binding DegreeОfImportance}" Foreground="Black"
+
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="20" Height="20" Fill="{Binding TaskColor}"/>
+                                <TextBlock Text="{Binding DegreeОfImportance}" Foreground="Black"
                                        FontSize="20"/>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -45,14 +49,17 @@
         <!--Выбранный Task-->
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="20 50 20 0" Height="400">
             <StackPanel BorderBrush="Black" BorderThickness="0.5" Padding="20">
-                <TextBlock Text="{Binding SelectedTask.Title}"
+                <TextBlock Text="{Binding SelectedTask.Name}"
                        Foreground="Black" FontSize="25" TextWrapping="Wrap"
                        TextAlignment="Center" HorizontalAlignment="Center"/>
                 <TextBlock Text="{Binding SelectedTask.Description}" Foreground="Gray"
                                        FontSize="20" TextWrapping="Wrap"/>
-                <TextBlock Text="{Binding SelectedTask.DegreeОfImportance}" 
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20" Height="20" Fill="{Binding SelectedTask.TaskColor}"/>
+                    <TextBlock Text="{Binding SelectedTask.DegreeОfImportance}" 
                            Foreground="Black" FontSize="20" 
                            HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
 
