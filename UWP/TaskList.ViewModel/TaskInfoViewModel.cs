@@ -74,14 +74,22 @@ namespace TaskList.ViewModel
             }
         }
 
+        public ImpKey Importance { get; set; }
+        public UrgKey Urgency { get; set; }
+
+        public TaskInfoViewModel() { }
+
         public TaskInfoViewModel(string title, string description, 
-            string degreeОfImportance, Color taskColor)
+            string degreeОfImportance, Color taskColor,
+            ImpKey impKey, UrgKey urgKey)
         {
             task = new TaskModel();
             this.Name = title;
             this.Description = description;
             this.DegreeОfImportance = degreeОfImportance;
             this.TaskColor = taskColor;
+            this.Importance = impKey;
+            this.Urgency = urgKey;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
