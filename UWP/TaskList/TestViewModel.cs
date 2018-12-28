@@ -6,15 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 
-namespace Control.ViewModel
+namespace TaskList.ViewModel
 {
-    public class TestViewModel:INotifyPropertyChanged
+    public class TestViewModel : INotifyPropertyChanged
     {
         private double _x;
         private double _y;
         private string _x_title;
         private string _y_title;
-        public double X {
+        public double X
+        {
             get { return _x; }
             set
             {
@@ -22,7 +23,8 @@ namespace Control.ViewModel
                 OnPropertyChanged("X");
             }
         }
-        public double Y {
+        public double Y
+        {
             get { return _y; }
             set
             {
@@ -30,7 +32,8 @@ namespace Control.ViewModel
                 OnPropertyChanged("Y");
             }
         }
-        public string Y_Title {
+        public string Y_Title
+        {
             get { return _y_title; }
             set
             {
@@ -38,7 +41,8 @@ namespace Control.ViewModel
                 OnPropertyChanged("Y_Title");
             }
         }
-        public string X_Title {
+        public string X_Title
+        {
             get { return _x_title; }
             set
             {
@@ -49,7 +53,7 @@ namespace Control.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void OnPropertyChanged(string property="")
+        private void OnPropertyChanged(string property = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }

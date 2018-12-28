@@ -1,72 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
-using TaskList.Interface;
+using System.Runtime.CompilerServices;
+
+using TaskList.Model;
 
 namespace TaskList.ViewModel
 {
-    public class TaskInfoViewModel : ITaskInfoViewModel
+    public class TaskInfoViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        private int _id;
-        private string _name;
-        private double _urgencyMeasure;
-        private double _importanceMeasure;
-        private string _description;
-        public int Id
+        private TaskModel task;
+        private string degreeОfImportance;
+
+        /// <summary>
+        /// Заголовок Задания
+        /// </summary>
+        public string Title
         {
-            get { return _id; }
+            get => task.Title;
             set
             {
-                _id = value;
-                OnPropertyChanged("Id");
+                task.Title = value;
+                OnPropertyChanged("Title");
             }
         }
-        public string Name
-        {
-            get { return _name; }
-            set
-            {
-                _name = value;
-                OnPropertyChanged("Name");
-            }
-        }
-        public double UrgencyMeasure
-        {
-            get { return _urgencyMeasure; }
-            set
-            {
-                _urgencyMeasure = value;
-                OnPropertyChanged("UrgencyMeasure");
-            }
-        }
-        public double ImportanceMeasure
-        {
-            get { return _importanceMeasure; }
-            set
-            {
-                _importanceMeasure = value;
-                OnPropertyChanged("ImportanceMeasure");
-            }
-        }
+
+        /// <summary>
+        /// Текст описания задания
+        /// </summary>
         public string Description
         {
-            get { return _description; }
+            get => task.Description;
             set
             {
-                _description = value;
+                task.Description = value;
                 OnPropertyChanged("Description");
-
             }
         }
-        protected void OnPropertyChanged(string name)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
+
+        /// <summary>
+        /// Степень важности
+        /// </summary>
+        public string DegreeОfImportance {
+            get => degreeОfImportance;
+            set
             {
-                handler(this, new PropertyChangedEventArgs(name));
+                this.degreeОfImportance = value;
+                OnPropertyChanged("DegreeОfImportance");
             }
+        }
+
+        public TaskInfoViewModel(string title, string description, string degreeОfImportance)
+        {
+            task = new TaskModel();
+            this.Title = title;
+            this.Description = description;
+            this.DegreeОfImportance = degreeОfImportance;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged([CallerMemberName]string prop = "")
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
     }
 }
