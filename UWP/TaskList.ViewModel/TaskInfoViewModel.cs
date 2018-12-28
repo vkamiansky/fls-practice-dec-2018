@@ -1,21 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Runtime.CompilerServices;
+using TaskList.Interface;
 
 using TaskList.Model;
 
 namespace TaskList.ViewModel
 {
-    public class TaskInfoViewModel : INotifyPropertyChanged
+    public class TaskInfoViewModel : INotifyPropertyChanged,ITaskInfoViewModel
     {
         private TaskModel task;
         private string degreeОfImportance;
-
+        /// <summary>
+        /// Id Задания
+        /// </summary>
+        public int Id
+        {
+            get;
+            set;
+        }
         /// <summary>
         /// Заголовок Задания
         /// </summary>
-        public string Title
+        public string Name
         {
             get => task.Title;
             set
@@ -50,10 +59,14 @@ namespace TaskList.ViewModel
             }
         }
 
+        public double UrgencyMeasureY { get; set; }
+        public double ImportanceMeasureX { get ; set ; }
+        public Color TaskColor { get ; set; }
+
         public TaskInfoViewModel(string title, string description, string degreeОfImportance)
         {
             task = new TaskModel();
-            this.Title = title;
+            this.Name = title;
             this.Description = description;
             this.DegreeОfImportance = degreeОfImportance;
         }
