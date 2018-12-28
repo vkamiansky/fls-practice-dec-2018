@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="TaskList.View.TaskListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaskList.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" 
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Список всех заданий" FontSize="30"/>
+        </StackPanel>
+        
+        <!-- Компонент, отвечающий за Tasks-->
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2" Margin="20 50 20 0">
+            <ListBox Name="TaskList" ItemsSource="{Binding Tasks}" 
+                     SelectedItem="{Binding SelectedTask, Mode=TwoWay}"
+                     SelectionMode="Single" MaxHeight="580">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10" Height="100" BorderBrush="Black" BorderThickness="0.5" Padding="5">
+                            <TextBlock Text="{Binding Title}" Foreground="Black"
+                                       FontSize="25" TextWrapping="Wrap"
+                                       TextAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock Text="{Binding Description}" Foreground="Gray"
+                                       FontSize="18" TextWrapping="Wrap" MaxHeight="60" MaxLines="1"/>
+                            <TextBlock Text="{Binding DegreeОfImportance}" Foreground="Black"
+                                       FontSize="20"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        
+        <!--Выбранный Task-->
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="20 50 20 0" Height="400">
+            <StackPanel BorderBrush="Black" BorderThickness="0.5" Padding="20">
+                <TextBlock Text="{Binding SelectedTask.Title}"
+                       Foreground="Black" FontSize="25" TextWrapping="Wrap"
+                       TextAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding SelectedTask.Description}" Foreground="Gray"
+                                       FontSize="20" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding SelectedTask.DegreeОfImportance}" 
+                           Foreground="Black" FontSize="20" 
+                           HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Возврат обратно-->
+        <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Margin="50" Height="60" Width="250" FontSize="20" Background="Beige"
+                    BorderBrush="Black" BorderThickness="0.5"
+                    Content="Вернуться на главную" Command="{Binding BackCommand}" >
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

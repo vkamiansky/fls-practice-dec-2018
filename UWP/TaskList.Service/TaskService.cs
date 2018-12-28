@@ -11,12 +11,12 @@ namespace TaskList.Service
 {
     public class TaskService:ITaskService
     {
-        ITaskRepository idataTask;
+       public ITaskRepository TaskRepository { get; set; }
         
         public List<Task> ReadAllTask()
         {
             List<Task> tasks = new List<Task>();
-            var r = idataTask.ReadAllTasks();
+            var r = TaskRepository.ReadAllTasks();
             foreach(var it in r)
             {
                 tasks.Add(new Task { Id = it.Id, Name = it.Name, UrgencyMeasure = it.UrgencyMeasure, ImportanceMeasure = it.ImportanceMeasure, Description = it.Description });
@@ -26,19 +26,19 @@ namespace TaskList.Service
 
         public Task ReadTask(string name)
         {
-            DataTask dt = idataTask.ReadTask(name);
+            DataTask dt = TaskRepository.ReadTask(name);
             return new Task { Id = dt.Id, Name = dt.Name, UrgencyMeasure = dt.UrgencyMeasure, ImportanceMeasure = dt.ImportanceMeasure, Description = dt.Description };
         }
 
         public void AddTask(Task task)
         {
             DataTask dt = new DataTask { Id = task.Id, Name = task.Name, UrgencyMeasure = task.UrgencyMeasure, ImportanceMeasure = task.ImportanceMeasure, Description = task.Description };
-            idataTask.AddTask(dt);
+            TaskRepository.AddTask(dt);
         }
 
         public void DeleteTask(string name)
         {
-            idataTask.DeleteTask(name);
+            TaskRepository.DeleteTask(name);
         }
     }
 }
