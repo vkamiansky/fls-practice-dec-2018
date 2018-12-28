@@ -39,7 +39,7 @@
                     </TextBlock.RenderTransform>
                 </TextBlock>
             </StackPanel>
-            <TextBlock x:Name="textBlock1" Margin="0,0,0,0" Text="Необходимость" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Center" Width="272" Height="33"/>
+            <TextBlock x:Name="textBlock1" Margin="0,0,0,0" Text="Необходимость" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Center" Width="372" Height="33"/>
         </StackPanel>
 
     </StackPanel>
