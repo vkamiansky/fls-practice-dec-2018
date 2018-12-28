@@ -10,6 +10,9 @@
     <Page.Background>
         <AcrylicBrush/>
     </Page.Background>
+    <Page.DataContext>
+        <local:TestNewTaskViewModel />
+    </Page.DataContext>
     <StackPanel Margin="50,0,50,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
         <TextBlock Text="Создание новой задачи" TextAlignment="Center" FontSize="25"  FontWeight="Bold"/>
@@ -25,7 +28,7 @@
         </StackPanel>
 
         <StackPanel Height="629" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Stretch">
-            <TextBlock Text="Задайте необходимость и срочность выполнения задачи на плоскости Эйзенхауэра" FontSize="15" Height="22" FontWeight="Bold" Margin="20,0,0,0" RenderTransformOrigin="0.497,0.75" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBlock Text="Задайте необходимость и срочность выполнения задачи на плоскости Эйзенхауэра" FontSize="15" Height="22" FontWeight="Bold" Margin="20,0,0,0" RenderTransformOrigin="0.497,0.75" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
             <StackPanel Orientation="Horizontal" Margin="10,0,0,0" HorizontalAlignment="Left" Width="918" Height="514" VerticalAlignment="Stretch">
                 <customControl1:GradientPlanePicker X="{Binding ImportanceMeasure, Mode=TwoWay}" Y="{Binding UrgencyMeasure, Mode=TwoWay}" Loaded="GradientPlanePicker_Loaded" Margin="98,0,4,0" Height="504">
                     <customControl1:GradientPlanePicker.RenderTransform>
@@ -33,7 +36,7 @@
                     </customControl1:GradientPlanePicker.RenderTransform>
                 </customControl1:GradientPlanePicker>
                 <Button Height="75" Width="165" Content="Создать" FontSize="15" Command="{Binding CreateTaskCommand}" HorizontalAlignment="Left" Margin="102,0,0,0" VerticalAlignment="Center"/>
-                <TextBlock x:Name="textBlock" Margin="-835,0,656,0" Text="Срочность" TextWrapping="Wrap" FontSize="20" Height="34" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBlock x:Name="textBlock" Margin="-798,0,692,0" Text="Срочность" TextWrapping="Wrap" FontSize="20" Height="34" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBlock.RenderTransform>
                         <CompositeTransform Rotation="-89.544"/>
                     </TextBlock.RenderTransform>
